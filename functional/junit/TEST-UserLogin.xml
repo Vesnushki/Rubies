@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite classname="behat.features" errors="0" failures="0" name="As a registered user I want to log in to the website" file="D:\RenegateBrand\functional\features\RegistrationAndLogin_RB\UserLogin.feature" tests="12" time="48.554112">
+    <testcase classname="As a registered user I want to log in to the website" name="User logout and login as another user (cache validation)" time="48.550112">
+    </testcase>
+</testsuite>

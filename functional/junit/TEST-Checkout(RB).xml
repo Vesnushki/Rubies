@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite classname="behat.features" errors="0" failures="2" name="As a user I want to be able to checkout products" file="D:\ergobaby\functional\features\Checkout(RB)\Checkout(RB).feature" tests="22" time="0.191011">
+    <testcase classname="As a user I want to be able to checkout products" name="Guest user checkout without registration and Check Money/order payment method" time="0.176011">
+        <failure message="Page with key 'product_page' is not found." type="failed"><![CDATA[
+exception 'OutOfRangeException' with message 'Page with key 'product_page' is not found.' in D:\ergobaby\functional\vendor\irs\behat-uimap-extension\src\Irs\BehatUimapExtension\PageSource\TafSource.php:105
+Stack trace:
+#0 D:\ergobaby\functional\vendor\irs\behat-uimap-extension\src\Irs\BehatUimapExtension\Context\UimapContext.php(782): Irs\BehatUimapExtension\PageSource\TafSource->getPageByKey('product_page')
+#1 [internal function]: FeatureContext->visit('product_page', Object(Behat\Gherkin\Node\TableNode))
+#2 D:\ergobaby\functional\vendor\behat\behat\src\Behat\Behat\Definition\Annotation\Definition.php(155): call_user_func_array(Array, Array)
+#3 D:\ergobaby\functional\vendor\behat\behat\src\Behat\Behat\Tester\StepTester.php(157): Behat\Behat\Definition\Annotation\Definition->run(Object(FeatureContext))
+#4 D:\ergobaby\functional\vendor\behat\behat\src\Behat\Behat\Tester\StepTester.php(126): Behat\Behat\Tester\StepTester->executeStepDefinition(Object(Behat\Gherkin\Node\StepNode), Object(Behat\Behat\Definition\Annotation\When))
+#5 D:\ergobaby\functional\vendor\behat\behat\src\Behat\Behat\Tester\StepTester.php(95): Behat\Behat\Tester\StepTester->executeStep(Object(Behat\Gherkin\Node\StepNode))
+#6 D:\ergobaby\functional\vendor\behat\gherkin\src\Behat\Gherkin\Node\AbstractNode.php(42): Behat\Behat\Tester\StepTester->visit(Object(Behat\Gherkin\Node\StepNode))
+#7 D:\ergobaby\functional\vendor\behat\behat\src\Behat\Behat\Tester\BackgroundTester.php(97): Behat\Gherkin\Node\AbstractNode->accept(Object(Behat\Behat\Tester\StepTester))
+#8 D:\ergobaby\functional\vendor\behat\gherkin\src\Behat\Gherkin\Node\AbstractNode.php(42): Behat\Behat\Tester\BackgroundTester->visit(Object(Behat\Gherkin\Node\BackgroundNode))
+#9 D:\ergobaby\functional\vendor\behat\behat\src\Behat\Behat\Tester\ScenarioTester.php(120): Behat\Gherkin\Node\AbstractNode->accept(Object(Behat\Behat\Tester\BackgroundTester))
+#10 D:\ergobaby\functional\vendor\behat\behat\src\Behat\Behat\Tester\ScenarioTester.php(78): Behat\Behat\Tester\ScenarioTester->visitBackground(Object(Behat\Gherkin\Node\BackgroundNode), Object(Behat\Gherkin\Node\ScenarioNode), Object(FeatureContext))
+#11 D:\ergobaby\functional\vendor\behat\gherkin\src\Behat\Gherkin\Node\AbstractNode.php(42): Behat\Behat\Tester\ScenarioTester->visit(Object(Behat\Gherkin\Node\ScenarioNode))
+#12 D:\ergobaby\functional\vendor\behat\behat\src\Behat\Behat\Tester\FeatureTester.php(88): Behat\Gherkin\Node\AbstractNode->accept(Object(Behat\Behat\Tester\ScenarioTester))
+#13 D:\ergobaby\functional\vendor\behat\gherkin\src\Behat\Gherkin\Node\AbstractNode.php(42): Behat\Behat\Tester\FeatureTester->visit(Object(Behat\Gherkin\Node\FeatureNode))
+#14 D:\ergobaby\functional\vendor\behat\behat\src\Behat\Behat\Console\Command\BehatCommand.php(150): Behat\Gherkin\Node\AbstractNode->accept(Object(Behat\Behat\Tester\FeatureTester))
+#15 D:\ergobaby\functional\vendor\behat\behat\src\Behat\Behat\Console\Command\BehatCommand.php(128): Behat\Behat\Console\Command\BehatCommand->runFeatures(Object(Behat\Gherkin\Gherkin))
+#16 D:\ergobaby\functional\vendor\symfony\console\Symfony\Component\Console\Command\Command.php(242): Behat\Behat\Console\Command\BehatCommand->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 D:\ergobaby\functional\vendor\symfony\console\Symfony\Component\Console\Application.php(200): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 D:\ergobaby\functional\vendor\behat\behat\src\Behat\Behat\Console\BehatApplication.php(68): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 D:\ergobaby\functional\vendor\symfony\console\Symfony\Component\Console\Application.php(106): Behat\Behat\Console\BehatApplication->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 D:\ergobaby\functional\vendor\behat\behat\bin\behat(32): Symfony\Component\Console\Application->run()
+#21 {main}
+]]></failure>
+        <failure message="Undefined step &quot;I press &quot;place_order&quot; button in fildset &quot;payment_method&quot;&quot;" type="failed"><![CDATA[
+exception 'Behat\Behat\Exception\UndefinedException' with message 'Undefined step "I press "place_order" button in fildset "payment_method""' in D:\ergobaby\functional\vendor\behat\behat\src\Behat\Behat\Definition\DefinitionDispatcher.php:172
+Stack trace:
+#0 D:\ergobaby\functional\vendor\behat\behat\src\Behat\Behat\Tester\StepTester.php(117): Behat\Behat\Definition\DefinitionDispatcher->findDefinition(Object(FeatureContext), Object(Behat\Gherkin\Node\StepNode), true)
+#1 D:\ergobaby\functional\vendor\behat\behat\src\Behat\Behat\Tester\StepTester.php(95): Behat\Behat\Tester\StepTester->executeStep(Object(Behat\Gherkin\Node\StepNode))
+#2 D:\ergobaby\functional\vendor\behat\gherkin\src\Behat\Gherkin\Node\AbstractNode.php(42): Behat\Behat\Tester\StepTester->visit(Object(Behat\Gherkin\Node\StepNode))
+#3 D:\ergobaby\functional\vendor\behat\behat\src\Behat\Behat\Tester\ScenarioTester.php(148): Behat\Gherkin\Node\AbstractNode->accept(Object(Behat\Behat\Tester\StepTester))
+#4 D:\ergobaby\functional\vendor\behat\behat\src\Behat\Behat\Tester\ScenarioTester.php(87): Behat\Behat\Tester\ScenarioTester->visitStep(Object(Behat\Gherkin\Node\StepNode), Object(Behat\Gherkin\Node\ScenarioNode), Object(FeatureContext), Array, true)
+#5 D:\ergobaby\functional\vendor\behat\gherkin\src\Behat\Gherkin\Node\AbstractNode.php(42): Behat\Behat\Tester\ScenarioTester->visit(Object(Behat\Gherkin\Node\ScenarioNode))
+#6 D:\ergobaby\functional\vendor\behat\behat\src\Behat\Behat\Tester\FeatureTester.php(88): Behat\Gherkin\Node\AbstractNode->accept(Object(Behat\Behat\Tester\ScenarioTester))
+#7 D:\ergobaby\functional\vendor\behat\gherkin\src\Behat\Gherkin\Node\AbstractNode.php(42): Behat\Behat\Tester\FeatureTester->visit(Object(Behat\Gherkin\Node\FeatureNode))
+#8 D:\ergobaby\functional\vendor\behat\behat\src\Behat\Behat\Console\Command\BehatCommand.php(150): Behat\Gherkin\Node\AbstractNode->accept(Object(Behat\Behat\Tester\FeatureTester))
+#9 D:\ergobaby\functional\vendor\behat\behat\src\Behat\Behat\Console\Command\BehatCommand.php(128): Behat\Behat\Console\Command\BehatCommand->runFeatures(Object(Behat\Gherkin\Gherkin))
+#10 D:\ergobaby\functional\vendor\symfony\console\Symfony\Component\Console\Command\Command.php(242): Behat\Behat\Console\Command\BehatCommand->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\ergobaby\functional\vendor\symfony\console\Symfony\Component\Console\Application.php(200): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 D:\ergobaby\functional\vendor\behat\behat\src\Behat\Behat\Console\BehatApplication.php(68): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 D:\ergobaby\functional\vendor\symfony\console\Symfony\Component\Console\Application.php(106): Behat\Behat\Console\BehatApplication->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 D:\ergobaby\functional\vendor\behat\behat\bin\behat(32): Symfony\Component\Console\Application->run()
+#15 {main}
+]]></failure>
+    </testcase>
+</testsuite>

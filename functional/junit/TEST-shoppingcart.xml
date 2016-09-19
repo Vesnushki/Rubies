@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite classname="behat.features" errors="0" failures="0" name="As user I want to manage my cart before Checkout" file="D:\RenegateBrand\functional\features\ShoppingCart\shoppingcart.feature" tests="39" time="100.346359">
+    <testcase classname="As user I want to manage my cart before Checkout" name="Open PDP from shopping cart" time="26.586067">
+    </testcase>
+    <testcase classname="As user I want to manage my cart before Checkout" name="Go to Checkout link" time="18.129063">
+    </testcase>
+    <testcase classname="As user I want to manage my cart before Checkout" name="Continue Shopping link" time="24.249103">
+    </testcase>
+    <testcase classname="As user I want to manage my cart before Checkout" name="Update product Qty" time="16.870061">
+    </testcase>
+    <testcase classname="As user I want to manage my cart before Checkout" name="Remove item from cart" time="14.072064">
+    </testcase>
+</testsuite>

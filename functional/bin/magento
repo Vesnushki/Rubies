@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+SRC_DIR="`pwd`"
+cd "`dirname "$0"`"
+cd "../vendor/irs/behat-magento-extension/bin"
+BIN_TARGET="`pwd`/magento"
+cd "$SRC_DIR"
+"$BIN_TARGET" "$@"

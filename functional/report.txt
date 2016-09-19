@@ -1,0 +1,45 @@
+Feature: As a registered user I want to log in to the website
+  in order to get access to additional features available for registered users
+
+  @clearCookiesAfterScenario
+  Scenario: User login with correct data                          # features\RegistrationAndLogin\UserLogin.feature:5
+    Given I am on "customer_login"                                # FeatureContext::visit()
+    When I fill in the following into fieldset "log_in_customer": # FeatureContext::fillFieldsIntoFieldset()
+      | email    | stas.chumak@guidance.com |
+      | password | 123123qa                 |
+    When I press "login" in fieldset "log_in_customer"            # FeatureContext::pressButtonInFieldset()
+    And I should see "My Dashboard"                               # FeatureContext::assertPageContainsText()
+
+  @clearCookiesAfterScenario
+  Scenario: User login with wrong password                        # features\RegistrationAndLogin\UserLogin.feature:14
+    Given I am on "customer_login"                                # FeatureContext::visit()
+    When I fill in the following into fieldset "log_in_customer": # FeatureContext::fillFieldsIntoFieldset()
+      | email    | stas.chumak@guidance.com |
+      | password | 1111111111               |
+    And I press "login" in fieldset "log_in_customer"             # FeatureContext::pressButtonInFieldset()
+    When I wait for AJAX up to 3 seconds                          # FeatureContext::waitForAjaxUpToSeconds()
+    And I should see "Invalid login or password."                 # FeatureContext::assertPageContainsText()
+
+  @clearCookiesAfterScenario
+  Scenario: User login with empty fields (form validation)        # features\RegistrationAndLogin\UserLogin.feature:24
+    Given I am on "customer_login"                                # FeatureContext::visit()
+    When I press "login" in fieldset "log_in_customer"            # FeatureContext::pressButtonInFieldset()
+    And I wait for AJAX                                           # FeatureContext::waitForAjax()
+    Then I should see '2' alerts                                  # FeatureContext::iShouldSeeAlerts()
+    And I should be on the "customer_login"                       # FeatureContext::iShouldBeOn()
+
+  @clearCookiesAfterScenario
+  Scenario: User logout and login as another user (cache validation)                        # features\RegistrationAndLogin\UserLogin.feature:32
+    Given I am logged in to frontend as "stas.chumak@guidance.com" with password "123123qa" # FeatureContext::iAmLoggedToFrontend()
+    Then I should see "stas.chumak@guidance.com"                                            # FeatureContext::assertPageContainsText()
+    And I should see "My Dashboard"                                                         # FeatureContext::assertPageContainsText()
+    When I go to "customer_logout"                                                          # FeatureContext::goToPage()
+    And I should be on the "home"                                                           # FeatureContext::iShouldBeOn()
+    Then I am on "customer_login"                                                           # FeatureContext::visit()
+    And I am logged in to frontend as "stas.chumak1@guidance.com" with password "123123qa"  # FeatureContext::iAmLoggedToFrontend()
+    Then I should see "stas.chumak1@guidance.com"                                           # FeatureContext::assertPageContainsText()
+    And I should see "My Dashboard"                                                         # FeatureContext::assertPageContainsText()
+
+4 scenarios (4 passed)
+23 steps (23 passed)
+0m55.495s

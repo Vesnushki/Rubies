@@ -1,0 +1,42 @@
+Feature: As a guest user I want to register on the website
+  in order to get access to additional features available for registered users
+
+  @clearCookiesAfterScenario
+  Scenario: User registration with correct information         # features\RegistrationAndLogin\UserRegistration.feature:5
+    Given I am on "register_account"                           # FeatureContext::visit()
+    When I fill in the following into fieldset "account_info": # FeatureContext::fillFieldsIntoFieldset()
+      | email                 | %rand%_user@guidance.com |
+      | first_name            | BehatName                |
+      | last_name             | Behat LastName           |
+      | password              | 123123qa                 |
+      | password_confirmation | 123123qa                 |
+    When I press "submit" in fieldset "account_info"           # FeatureContext::pressButtonInFieldset()
+    Then I should see "My Dashboard"                           # FeatureContext::assertPageContainsText()
+
+  @clearCookiesAfterScenario
+  Scenario: User registration with already registered e-mail                                                                                                                         # features\RegistrationAndLogin\UserRegistration.feature:17
+    Given I am on "register_account"                                                                                                                                                 # FeatureContext::visit()
+    When I fill in the following into fieldset "account_info":                                                                                                                       # FeatureContext::fillFieldsIntoFieldset()
+      | email                 | stas.chumak@guidance.com |
+      | first_name            | Behat Name               |
+      | last_name             | Behat Last Name          |
+      | password              | 123123qa                 |
+      | password_confirmation | 123123qa                 |
+    When I press "submit" in fieldset "account_info"                                                                                                                                 # FeatureContext::pressButtonInFieldset()
+    When I wait for AJAX up to 3 seconds                                                                                                                                             # FeatureContext::waitForAjaxUpToSeconds()
+    Then I should see "There is already an account with this email address. If you are sure that it is your email address, click here to get your password and access your account." # FeatureContext::assertPageContainsText()
+
+  Scenario: User registration with no required information filled (form validation)                                                                                                  # features\RegistrationAndLogin\UserRegistration.feature:29
+    Given I am on "register_account"                                                                                                                                                 # FeatureContext::visit()
+    When I press "submit" in fieldset "account_info"                                                                                                                                 # FeatureContext::pressButtonInFieldset()
+    Then I should see '5' alerts                                                                                                                                                     # FeatureContext::iShouldSeeAlerts()
+    And I should be on the "register_account"                                                                                                                                        # FeatureContext::iShouldBeOn()
+
+  Scenario: User is redirected to the Registration form from SignIn page                                                                                                             # features\RegistrationAndLogin\UserRegistration.feature:35
+    Given I am on "customer_login"                                                                                                                                                   # FeatureContext::visit()
+    When I press "create_account" in fieldset "new_account"                                                                                                                          # FeatureContext::pressButtonInFieldset()
+    Then I should be on the "register_account"                                                                                                                                       # FeatureContext::iShouldBeOn()
+
+4 scenarios (4 passed)
+16 steps (16 passed)
+0m45.497s

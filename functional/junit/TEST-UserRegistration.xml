@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite classname="behat.features" errors="0" failures="2" name="As a guest user I want to register on the website" file="D:\ergobaby\functional\features\RegistrationAndLogin\UserRegistration.feature" tests="11" time="1.643002">
+    <testcase classname="As a guest user I want to register on the website" name="User registration with correct information" time="0.803001">
+        <failure message="Field with uimap &quot;&lt;page_url:https://dev.rbgsystems.com/customer/account/create/;key:email;type:field;fieldset:account_info&gt;&quot; not found." type="failed"><![CDATA[
+Field with uimap "<page_url:https://dev.rbgsystems.com/customer/account/create/;key:email;type:field;fieldset:account_info>" not found.
+
++--[ https://dev.rbgsystems.com/customer/account/create/ | Selenium2Driver ]
+|
+|  1 exception(s):
+|  Exception #0 (Exception): Unable to proceed: the maintenance mode is enabled. 
+|  
+|  Exception #0 (Exception): Unable to proceed: the maintenance mode is enabled. 
+|  #0 /var/www/brixton.com/releases/20160906192843/vendor/magento/framework/App/Bootstrap.php(256): Magento\Framework\App\Bootstrap->assertMaintenance()
+|  #1 /var/www/brixton.com/releases/20160906192843/pub/index.php(48): Magento\Framework\App\Bootstrap->run(Object(Magento\Framework\App\Http))
+|  #2 {main}
+|  
+]]></failure>
+    </testcase>
+    <testcase classname="As a guest user I want to register on the website" name="User registration with already registered e-mail" time="0.750001">
+        <failure message="Field with uimap &quot;&lt;page_url:https://dev.rbgsystems.com/customer/account/create/;key:email;type:field;fieldset:account_info&gt;&quot; not found." type="failed"><![CDATA[
+Field with uimap "<page_url:https://dev.rbgsystems.com/customer/account/create/;key:email;type:field;fieldset:account_info>" not found.
+
++--[ https://dev.rbgsystems.com/customer/account/create/ | Selenium2Driver ]
+|
+|  1 exception(s):
+|  Exception #0 (Exception): Unable to proceed: the maintenance mode is enabled. 
+|  
+|  Exception #0 (Exception): Unable to proceed: the maintenance mode is enabled. 
+|  #0 /var/www/brixton.com/releases/20160906192843/vendor/magento/framework/App/Bootstrap.php(256): Magento\Framework\App\Bootstrap->assertMaintenance()
+|  #1 /var/www/brixton.com/releases/20160906192843/pub/index.php(48): Magento\Framework\App\Bootstrap->run(Object(Magento\Framework\App\Http))
+|  #2 {main}
+|  
+]]></failure>
+    </testcase>
+</testsuite>

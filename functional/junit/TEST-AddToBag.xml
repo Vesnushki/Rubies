@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite classname="behat.features" errors="0" failures="0" name="As a user I want to be able to add products to cart" file="D:\RenegateBrand\functional\features\AddToCart\AddToBag.feature" tests="14" time="29.633089">
+    <testcase classname="As a user I want to be able to add products to cart" name="Add product configurable with qty = 1 to cart" time="18.171056">
+    </testcase>
+    <testcase classname="As a user I want to be able to add products to cart" name="Add simple product with qty = 1 to cart" time="5.605024">
+    </testcase>
+    <testcase classname="As a user I want to be able to add products to cart" name="Add simple product with qty = 999 to cart" time="5.827009">
+    </testcase>
+</testsuite>

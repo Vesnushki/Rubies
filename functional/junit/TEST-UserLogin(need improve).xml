@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite classname="behat.features" errors="0" failures="4" name="As a registered user I want to log in to the website" file="D:\ergobaby\functional\features\RegistrationAndLogin\UserLogin(need improve).feature" tests="28" time="3.167006">
+    <testcase classname="As a registered user I want to log in to the website" name="User login with correct data" time="0.750001">
+        <failure message="Field with uimap &quot;&lt;page_url:https://dev.rbgsystems.com/customer/account/login/;key:email;type:field;fieldset:log_in_customer&gt;&quot; not found." type="failed"><![CDATA[
+Field with uimap "<page_url:https://dev.rbgsystems.com/customer/account/login/;key:email;type:field;fieldset:log_in_customer>" not found.
+
++--[ https://dev.rbgsystems.com/customer/account/login/ | Selenium2Driver ]
+|
+|  1 exception(s):
+|  Exception #0 (Exception): Unable to proceed: the maintenance mode is enabled. 
+|  
+|  Exception #0 (Exception): Unable to proceed: the maintenance mode is enabled. 
+|  #0 /var/www/brixton.com/releases/20160906192843/vendor/magento/framework/App/Bootstrap.php(256): Magento\Framework\App\Bootstrap->assertMaintenance()
+|  #1 /var/www/brixton.com/releases/20160906192843/pub/index.php(48): Magento\Framework\App\Bootstrap->run(Object(Magento\Framework\App\Http))
+|  #2 {main}
+|  
+]]></failure>
+    </testcase>
+    <testcase classname="As a registered user I want to log in to the website" name="User login with wrong password" time="0.747001">
+        <failure message="Field with uimap &quot;&lt;page_url:https://dev.rbgsystems.com/customer/account/login/;key:email;type:field;fieldset:log_in_customer&gt;&quot; not found." type="failed"><![CDATA[
+Field with uimap "<page_url:https://dev.rbgsystems.com/customer/account/login/;key:email;type:field;fieldset:log_in_customer>" not found.
+
++--[ https://dev.rbgsystems.com/customer/account/login/ | Selenium2Driver ]
+|
+|  1 exception(s):
+|  Exception #0 (Exception): Unable to proceed: the maintenance mode is enabled. 
+|  
+|  Exception #0 (Exception): Unable to proceed: the maintenance mode is enabled. 
+|  #0 /var/www/brixton.com/releases/20160906192843/vendor/magento/framework/App/Bootstrap.php(256): Magento\Framework\App\Bootstrap->assertMaintenance()
+|  #1 /var/www/brixton.com/releases/20160906192843/pub/index.php(48): Magento\Framework\App\Bootstrap->run(Object(Magento\Framework\App\Http))
+|  #2 {main}
+|  
+]]></failure>
+    </testcase>
+    <testcase classname="As a registered user I want to log in to the website" name="User login with empty fields (form validation)" time="0.730001">
+        <failure message="Button with uimap &quot;&lt;page_url:https://dev.rbgsystems.com/customer/account/login/;key:login;type:button;fieldset:log_in_customer&gt;&quot; not found." type="failed"><![CDATA[
+Button with uimap "<page_url:https://dev.rbgsystems.com/customer/account/login/;key:login;type:button;fieldset:log_in_customer>" not found.
+
++--[ https://dev.rbgsystems.com/customer/account/login/ | Selenium2Driver ]
+|
+|  1 exception(s):
+|  Exception #0 (Exception): Unable to proceed: the maintenance mode is enabled. 
+|  
+|  Exception #0 (Exception): Unable to proceed: the maintenance mode is enabled. 
+|  #0 /var/www/brixton.com/releases/20160906192843/vendor/magento/framework/App/Bootstrap.php(256): Magento\Framework\App\Bootstrap->assertMaintenance()
+|  #1 /var/www/brixton.com/releases/20160906192843/pub/index.php(48): Magento\Framework\App\Bootstrap->run(Object(Magento\Framework\App\Http))
+|  #2 {main}
+|  
+]]></failure>
+    </testcase>
+    <testcase classname="As a registered user I want to log in to the website" name="User logout and login as another user (cache validation)" time="0.810001">
+        <failure message="Field with uimap &quot;&lt;page_key:customer_login;page_url:https://dev.rbgsystems.com/customer/account/login/;key:email;type:field;fieldset:log_in_customer&gt;&quot; not found." type="failed"><![CDATA[
+Field with uimap "<page_key:customer_login;page_url:https://dev.rbgsystems.com/customer/account/login/;key:email;type:field;fieldset:log_in_customer>" not found.
+
++--[ https://dev.rbgsystems.com/customer/account/login/ | Selenium2Driver ]
+|
+|  1 exception(s):
+|  Exception #0 (Exception): Unable to proceed: the maintenance mode is enabled. 
+|  
+|  Exception #0 (Exception): Unable to proceed: the maintenance mode is enabled. 
+|  #0 /var/www/brixton.com/releases/20160906192843/vendor/magento/framework/App/Bootstrap.php(256): Magento\Framework\App\Bootstrap->assertMaintenance()
+|  #1 /var/www/brixton.com/releases/20160906192843/pub/index.php(48): Magento\Framework\App\Bootstrap->run(Object(Magento\Framework\App\Http))
+|  #2 {main}
+|  
+]]></failure>
+    </testcase>
+</testsuite>

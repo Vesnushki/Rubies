@@ -1,0 +1,26 @@
+default:
+  extensions:
+    #Irs\BehatMagentoExtension\Extension:
+    #  magento: D:\Sites\thegreatcourses
+    #  target: D:\Sites\behat
+    #  url: http://sts.tgc.guidance-dnk
+    #  store: base
+    #  scope: website
+    #  database:
+    #    schema: tgc_behat2
+    Irs\BehatUimapExtension\Extension:
+      uimaps: 
+        "admin/": uimaps/admin
+        "/": uimaps/frontend
+    Irs\BehatPopupExtension\Extension: ~
+    Behat\MinkExtension\Extension:
+      base_url: https://dev.rbgsystems.com/
+      selenium2: ~
+      default_session: selenium2
+      browser_name: firefox
+      #selenium2:
+      #        capabilities: { "browser": "firefox", "version": "45.0.2"}
+  formatter:
+    name:                   pretty,junit,html
+    parameters:
+      output_path:          null,junit,behat_report.html
