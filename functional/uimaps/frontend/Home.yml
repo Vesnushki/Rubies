@@ -48,7 +48,7 @@ home:
                         fields: 
                             search: //input[@id='search']
                         buttons:
-                            search_button: //button[span='Search']
+                            search_button: //form[@id='search_mini_form']//button[@title='Search']
                 -
                     community_poll:
                         xpath: //div[@class='block block-poll']

@@ -36,13 +36,16 @@ product_page:
                     product_info: &productInfo
                         xpath: //div[@class='product-info-main']
                         buttons:
-                            add_to_cart: //button[span='Add to Cart']
+                            add_to_cart: //button[@id='product-addtocart-button']
                         fields:
-                            product_qty: //input[@id='qty']
                             grouped_subproduct_qty: //table[@id='super-product-table']//tr[./td[text()='%subproductName%']]//input[@title='Qty']
+                            product_quantity: //input[@name='cqty[9105]']
+                            product_quantity_simple: //input[@id='qty']
+                        dropdowns:
+                            product_qty: //select[@id='qty']
                         links:
                             downloadable_sample: //dl[@class='item-options']/dd/a[normalize-space(text())='%samplesTitle%']
-                            add_to_wishlist: //div[@class='product-essential']//a[text()='Add to Wishlist']
+                            add_to_wishlist: //div[@class='product-addto-links']//span[text()='Save to Shopping List']
                             add_to_compare: //a[text()='Add to Compare']
                             email_to_friend: //a[text()='Email to a Friend']
                             first_review: //a[text()='Be the first to review this product']
@@ -140,6 +143,13 @@ product_page:
                             configurable_product_qty: //input[@id='qty']
                         buttons:
                             configurable_add_to_cart: //button[span='Add to Cart']
+                -
+                    select_a_wishlist:
+                        xpath: //div[@class='mwishlist wborder']
+                        fields:
+                            enter_wishlist_name: //input[@id='mwishlist_new']
+                        radiobuttons:
+                            create_new_wishlist: //input[@id='mwishlist_id-1']
                 -
                     details: &details
                         xpath: //div[h2[text()='Details']]

@@ -18,7 +18,8 @@ use Behat\Behat\Context\ClosuredContextInterface,
  */
 class FeatureContext extends BehatContext implements MinkAwareInterface
 {
-    use /*MagentoHooks,*/ UimapContext, PopupContext;
+    use /*MagentoHooks,*/
+        UimapContext, PopupContext;
 
     /**
      * Initializes context.
@@ -107,7 +108,7 @@ class FeatureContext extends BehatContext implements MinkAwareInterface
      */
     public function pressButtonInFieldset($button, $fieldset)
     {
-        $this->findField($button,'button', $fieldset)->press();
+        $this->findField($button, 'button', $fieldset)->press();
 
     }
 
@@ -154,7 +155,8 @@ class FeatureContext extends BehatContext implements MinkAwareInterface
      * @When /^(?:|I )go to "(?P<page>[^"]+)"$/
      */
     public function goToPage($page)
-    {   $this->visit($page);
+    {
+        $this->visit($page);
         $this->loadPage($page);
     }
 
@@ -176,9 +178,8 @@ class FeatureContext extends BehatContext implements MinkAwareInterface
         $randomCharactersAmount = 6;
         $randomString = substr(str_shuffle("0123456789abcdefghijklmnopqrstuvwxyz"), 0, $randomCharactersAmount);
 
-        if(stristr($value, $needle))
-        {
-            $value=substr_replace($value, $randomString, 0,6);;
+        if (stristr($value, $needle)) {
+            $value = substr_replace($value, $randomString, 0, 6);;
         }
 
         $params = ($params) ? $params->getRowsHash() : array();
@@ -207,7 +208,7 @@ class FeatureContext extends BehatContext implements MinkAwareInterface
      */
     public function setOption($option, $fieldset = null, $tab = null, TableNode $params = null)
     {
-        $this->checkOption($option, $fieldset, $tab, $params );
+        $this->checkOption($option, $fieldset, $tab, $params);
     }
 
     /**
@@ -231,24 +232,24 @@ class FeatureContext extends BehatContext implements MinkAwareInterface
         //current implementation is the fastest
         try {
             $this->getMink()->assertSession()->elementExists(
-                'xpath', "//div[@option-id='128']"
+                'xpath', "//div[@option-id='1754']"
             )->click();
         } catch (\Behat\Mink\Exception\ElementNotFoundException $e) {
         }
 
-            //looks for available sizes
+        //looks for available sizes
         try {
             $this->getMink()->assertSession()->elementExists(
-                'xpath', "//div[@option-id='1566']"
+                'xpath', "//div[@option-id='2051']"
             )->click();
         } catch (\Behat\Mink\Exception\ElementNotFoundException $e) {
         }
-        
+
     }
-        public function spin ($lambda, $wait = 60)
+
+    public function spin($lambda, $wait = 60)
     {
-        for ($i = 0; $i < $wait; $i++)
-        {
+        for ($i = 0; $i < $wait; $i++) {
             try {
                 if ($lambda($this)) {
                     return true;
@@ -273,24 +274,24 @@ class FeatureContext extends BehatContext implements MinkAwareInterface
      *
      * @Then /^(?:|I )wait until I see "(?P<text>[^"]*)"$/
      */
-    public function iWaitForElement($text){
-        $this->spin(function(FeatureContext $context) use ($text){
-                try {
-                    $context->assertPageContainsText($text);
-                    return true;
-                }
-                catch(\Behat\Mink\Exception\ResponseTextException $e){
-                    print_r("AAAAA " +$e);
+    public function iWaitForElement($text)
+    {
+        $this->spin(function (FeatureContext $context) use ($text) {
+            try {
+                $context->assertPageContainsText($text);
+                return true;
+            } catch (\Behat\Mink\Exception\ResponseTextException $e) {
+                print_r("AAAAA " + $e);
 
-                }
-                return false;
             }
+            return false;
+        }
         );
     }
 
     /**
-    * @Then /^I click on "([^"]*)"$/
-    */
+     * @Then /^I click on "([^"]*)"$/
+     */
     public function iClickOn($element)
     {
         $page = $this->getSession()->getPage();
@@ -307,10 +308,34 @@ class FeatureContext extends BehatContext implements MinkAwareInterface
      */
     public function fillPayPalLoginForm()
     {
-        $field_email = $this->getSession()->getPage()->find('xpath', '//input[@id="email"]');
-        $field_field = $this->getSession()->getPage()->find('xpath', '//input[@id="password"]');
-        $this->fillField($field_email, 'slipknot4@ua.fm');
-        $this->fillField($field_field, '12345678');
+//        $field_email = $this->getSession()->getPage()->find('xpath', '//input[@id="email"]');
+//        $field_field = $this->getSession()->getPage()->find('xpath', '//input[@id="password"]');
+//        $this->fillField($field_email, 'slipknot4@ua.fm');
+//        $this->fillField($field_field, '12345678');
+
+        //$field1 = $this->fixStepArgument($field1);
+        $page = $this->getSession()->getPage();
+        $formElement = $page->find('xpath', '//input[@id="email"]');
+        if (null === $formElement) {
+            throw new \LogicException(sprintf('Form field not found: "%s"', $field1));
+        }
+        $formElement->setValue('a value');
+    }
+
+    /**
+     * Fills in form field with specified id|name|label|value
+     * Example: When I fill in "username" with: "bwayne"
+     * Example: And I fill in "bwayne" for "username"
+     *
+     * @When /^(?:|I )fill PayPal in "(?P<field>(?:[^"]|\\")*)" with "(?P<value>(?:[^"]|\\")*)"$/
+     * @When /^(?:|I )fill PayPal in "(?P<field>(?:[^"]|\\")*)" with:$/
+     * @When /^(?:|I )fill PayPal in "(?P<value>(?:[^"]|\\")*)" for "(?P<field>(?:[^"]|\\")*)"$/
+     */
+    public function fillPayPalField($field, $value)
+    {
+        $field = $this->fixStepArgument($field);
+        $value = $this->fixStepArgument($value);
+        $this->getSession()->getPage()->fillField($field, $value);
     }
 
     /**
@@ -318,8 +343,70 @@ class FeatureContext extends BehatContext implements MinkAwareInterface
      */
     public function iSwitchToIframe()
     {
-        $find_iframe = $this->getSession()->getPage()->find('css','#injectedUnifiedLogin iframe');
+        $find_iframe = $this->getSession()->getPage()->find('css', '#injectedUnifiedLogin iframe');
         $iframeName = $find_iframe->getAttribute('name');
         $this->getSession()->switchToIFrame($iframeName);
     }
+
+    /**
+     * @When /^I choose to pay with PayPal$/
+     */
+    public function iChooseToPayWithPayPal()
+    {
+        // Okay, now we're in PayPal
+        $page = $this->getSession()->getPage();
+        $iframes = $page->findAll('xpath', '//iframe');
+        /**
+         * Get the first frame, there might be more than one.
+         *
+         * @var NodeElement $payPalIframe
+         */
+        $payPalIframe = $iframes[0];
+        // Then we switch to it. Mink works on a document-by-document basis.
+        $this->getSession()->getDriver()->switchToIFrame($payPalIframe->getAttribute('name'));
+        $payPalEmail = $page->findById('email');
+        $payPalPassword = $page->findById('password');
+        $doLogin = $page->findById('btnLogin');
+        $payPalEmail->setValue('slipknot4@ua.fm');
+        $payPalPassword->setValue('12345678');
+        $doLogin->click();
+        // Ridiculous, but PayPal takes a few seconds to process.
+        sleep(20);
+//        $doConfirm = null;
+//        $iteration = 0;
+//        while (null === $doConfirm && $iteration <= 5) {
+//            ++$iteration;
+//            sleep(5);
+//            $doConfirm = $this->getSession()->getPage()->findById('confirmButtonTop');
+//        }
+
+
+//        $doConfirm = $this->getSession()->getPage()->findById('confirmButtonTop');
+//        sleep(10);
+//        $doConfirm->click();
+//        // Return back to the shop.
+//        #$this->getSession()->wait(10000, '"undefined" !== typeof someVariableIKnowExistsOnlyOnMySite');
+//        sleep(10);
+    }
+
+    /**
+     * @When /^I hover over the element "([^"]*)"$/
+     */
+    public function iHoverOverTheElement($locator)
+    {
+        $session = $this->getSession(); // get the mink session
+        $element = $session->getPage()->find('xpath', $locator); // runs the actual query and returns the element
+
+        // errors must not pass silently
+        if (null === $element) {
+            throw new \InvalidArgumentException(sprintf('Could not evaluate CSS selector: "%s"', $locator));
+        }
+
+        // ok, let's hover it
+        $element->mouseOver();
+    }
+
+
+
+
 }

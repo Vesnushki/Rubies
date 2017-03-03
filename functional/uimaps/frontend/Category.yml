@@ -142,12 +142,12 @@ category_page_index:
         messages: *categoryPageMessages
 
 category_page:
-    mca: mens/headwear.html
+    mca: men-s/clothing/jackets.html
     uimap:
              fieldsets:
                  -
                      category_list:
                          xpath: //main[@id='maincontent']
                          links:
-                            product: //a[contains(text(),'Dunhill Mesh Cap')]
+                            product: //a[contains(text(),'PINNACLE JACKET')]
 

@@ -50,6 +50,7 @@ my_wishlist:
                             remove_item: //tr[contains(.,'%productName%')]//a[@title='Remove Item']
                             remove_item_generic: //a[@title='Remove Item']
                         pageelements:
+                            create_list: //input[@id='mwishlist-create']
                             product_table_head: //table[@id='wishlist-table']/thead
                             no_items: //div[@class='my-wishlist']/p[normalize-space(text())='You have no items in your wishlist.']
                             price_regular: //tr[contains(.,'%productName%')]//span[@class='regular-price']/span[@class='price' and normalize-space(text())='%price%']

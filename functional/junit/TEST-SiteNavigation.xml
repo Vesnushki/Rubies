@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite classname="behat.features" errors="0" failures="0" name="As a customer I want to go from Home page to some category" file="D:\RenegateBrand\functional\features\SiteNavigation\SiteNavigation.feature" tests="8" time="24.958072">
-    <testcase classname="As a customer I want to go from Home page to some category" name="Customer go to Headwear category from Home page" time="19.945062">
+<testsuite classname="behat.features" errors="0" failures="0" name="As a customer I want to go from Home page to some category" file="D:\RenegateBrand\functional\features\SiteNavigation\SiteNavigation.feature" tests="8" time="34.889785">
+    <testcase classname="As a customer I want to go from Home page to some category" name="Customer go to Headwear category from Home page" time="24.991268">
     </testcase>
-    <testcase classname="As a customer I want to go from Home page to some category" name="Customer go from category Headwear to PDP" time="4.783010">
+    <testcase classname="As a customer I want to go from Home page to some category" name="Customer go from category Headwear to PDP" time="9.841513">
     </testcase>
 </testsuite>

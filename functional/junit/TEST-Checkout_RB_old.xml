@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite classname="behat.features" errors="0" failures="1" name="As a user I want to be able to do shopping list activity" file="D:\Rubies(autoscripts)\functional\features\Shopping list\Checkout_RB_old.feature" tests="10" time="31.982830">
+    <testcase classname="As a user I want to be able to do shopping list activity" name="Customer add producst from" time="28.664639">
+        <failure message="The text &quot;Product  has been added to wishlist &quot; was not found anywhere in the text of the current page." type="failed"><![CDATA[
+The text "Product  has been added to wishlist " was not found anywhere in the text of the current page.
+
++--[ https://prod.rubies.com/white-dress-adult-queen-gorgo-costume.html | Selenium2Driver ]
+|
+|  Product "White Dress Adult Queen Gorgo Costume" has been added to wishlist "Main" John Josephson Change Where to Buy Cart 1   Shop Products Catalogs Home White Dress Adult Queen Gorgo Costume White Dress Adult Queen Gorgo Costume Item 888621 $22.50 SIZE (See Size Chart) QUANTITY AVAILABLE NOW MPN UPC (See Barcodes) Medium - + 165 888621-M 883028862160 Small - + 97 888621-S 883028862153 XS - + 198 888621-XS 883028862146 ADD TO CART Save to Shopping List Where to Buy Description License: 300 Movie Contains: Dress and necklace RUBIE'S FAMILY OF COMPANIES Forum Novelties Leader in the Halloween, Joke, Trick, Magic and Novelty gift item business. Imagine by Rubie's Designer, manufacturer, and distributor of children's dress up clothing and costumes! Princess Paradise Leading producer of high quality costumes specializing in newborn through teen designs. Highest Heel Providing women with a variety of high quality trendy styles and colors of shoes, boots, pumps and platforms. Charades Lead...
+|  
+]]></failure>
+    </testcase>
+</testsuite>

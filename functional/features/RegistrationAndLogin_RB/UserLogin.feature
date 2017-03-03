@@ -4,15 +4,15 @@ Feature: As a registered user I want to log in to the website
   Scenario: User login  with correct data
     Given I am on "customer_login"
     When I fill in the following into fieldset "log_in_customer":
-      | email          |kkatekoss@gmail.com|
-      | password       |Kkate123|
+      | email          |johnjosephson@yahoo.com|
+      | password       |Password123|
    When I press "login" in fieldset "log_in_customer"
    Then I should see "My Dashboard"
   @2
   Scenario: User login with wrong password
     Given I am on "customer_login"
     When I fill in the following into fieldset "log_in_customer":
-      | email          |kkatekoss@gmail.com|
+      | email          |johnjosephson@yahoo.com|
       | password       |Kkate|
     When I press "login" in fieldset "log_in_customer"
       And I wait for AJAX up to 5 seconds
@@ -30,14 +30,14 @@ Feature: As a registered user I want to log in to the website
     Then I should see "kkatekoss@gmail.com"
       And I should see "My Dashboard"
     And I wait for 10 seconds
-    Then I click on "//a[contains(.,'Sign In')]"
+    Then I click on "//button[@class='action switch']"
     And I wait for 10 seconds
     #Then I follow "user" in fieldset "frontend_header"
-    Then I click on "//div[@id='ui-id-1']//a[contains(.,'Sign Out')]"
+    Then I click on "//div[@class='panel wrapper']//li[@class='customer-welcome active']//a[contains(.,'Log Out')]"
       And I wait for 10 seconds
       And I should be on the "home"
     Then I am on "customer_login"
-      And I am logged in to frontend as "kkatekoss1@gmail.com" with password "Kkate123"
+      And I am logged in to frontend as "kkatekoss1@gmail.com" with password "Kkate111"
     Then I should see "kkatekoss1@gmail.com"
       And I should see "My Dashboard"
   @5

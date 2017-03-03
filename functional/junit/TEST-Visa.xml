@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite classname="behat.features" errors="0" failures="0" name="As a user I want to be able to checkout products" file="D:\RenegateBrand\functional\features\Checkout_RB\Visa.feature" tests="36" time="113.659500">
+    <testcase classname="As a user I want to be able to checkout products" name="Register on checkout and Visa payment method" time="113.656500">
+    </testcase>
+</testsuite>

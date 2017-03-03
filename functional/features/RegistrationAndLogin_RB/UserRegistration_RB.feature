@@ -5,25 +5,25 @@ Feature: As a guest user I want to register on the website
   Scenario: User registration with correct information
     Given I am on "register_account"
     When I fill in the following into fieldset "account_info":
-      | email                | %rand%_user@guidance.com|
       | first_name           | BehatName               |
       | last_name            | Behat LastName          |
+      | email                | %rand%_user@guidance.com|
+      | company_name         | Test                    |
       | password             | 123123qa!               |
       | password_confirmation| 123123qa!               |
-    When I check "sign_up_newsletter" in fieldset "account_info"
     When I press "submit" in fieldset "account_info"
-    Then I should see "My Dashboard"
-    Then I should see "You subscribe to "
+    Then I should see "Thank you for registering. Your account is under review."
+
 
 @2
-  Scenario: User registration with already registered e-mail
-    Given I am on "register_account"
-    When I fill in the following into fieldset "account_info":
-      | email                | stas.chumak@guidance.com|
-      | first_name           | Behat Name|
-      | last_name            | Behat Last Name|
-      | password             | 123123qa!|
-      | password_confirmation| 123123qa!|
-    When I press "submit" in fieldset "account_info"
-    When I wait for AJAX up to 3 seconds
-    Then I should see "There is already an account with this email address. If you are sure that it is your email address, click here to get your password and access your account."
+Scenario: User registration with existing email
+  Given I am on "register_account"
+  When I fill in the following into fieldset "account_info":
+    | first_name           | BehatName               |
+    | last_name            | Behat LastName          |
+    | email                | kkatekoss@gmail.com     |
+    | company_name         | Test                    |
+    | password             | 123123qa!               |
+    | password_confirmation| 123123qa!               |
+  When I press "submit" in fieldset "account_info"
+  Then I should see "There is already an account with this email address. If you are sure that it is your email address, click here to get your password and access your account."

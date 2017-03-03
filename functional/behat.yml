@@ -14,13 +14,13 @@ default:
         "/": uimaps/frontend
     Irs\BehatPopupExtension\Extension: ~
     Behat\MinkExtension\Extension:
-      base_url: https://dev.rbgsystems.com/
+      base_url: https://prod.rubies.com
       selenium2: ~
       default_session: selenium2
       browser_name: firefox
       #selenium2:
-      #        capabilities: { "browser": "firefox", "version": "45.0.2"}
+      #        capabilities: { "browser": "firefox", "version": "47.0.1"}
   formatter:
     name:                   pretty,junit,html
     parameters:
-      output_path:          null,junit,behat_report.html
+      output_path:          null,junit,behat_report.htmls

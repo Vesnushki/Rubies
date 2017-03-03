@@ -36,29 +36,31 @@ shopping_cart:
                     products_in_cart:
                         xpath: //form[@id='form-validate']
                         buttons:
-                            update_shopping_cart: //button[span='Update Shopping Cart']
+                            update_shopping_cart: //button[@title='Update Shopping Cart']
                         checkboxes:
                             move_to_wishlist: //tr[*//a[text()='%productName%']]//input[@title='Move to Wishlist']
                         links:
-                            remove_item: //a[@title='Remove item']
+                            remove_item: //td[contains(@class, 'qty')]//span[contains(text(), 'Delete')]
+                            save_for_later: //td[contains(@class, 'qty')]//span[contains(text(), 'Save for later')]
                             product_name: //strong[@class='product-item-name']/a[text()='%productName%']
+                            continue_shopping: //a[@title='Continue Shopping']
                         pageelements:
                             product_table_head: //table[@id='shopping-cart-table']/thead
                             price_totals: //table[@id='shopping-cart-totals-table']
                             product_line:  //table[@id='shopping-cart-table']/tbody/tr
-                        dropdowns:
-                            product_qty: //select[@data-role='cart-item-qty-select']
+                        fields:
+                            product_qty: //input[@id='cart-1825-qty']
                         select:
                             product_qty: //select[@data-role='cart-item-qty-select']
                 -
                     totals:
                         xpath: //div[@class='cart-summary']
                         buttons:
-                            proceed_to_checkout: //button[span='Proceed to Checkout']
+                            proceed_to_checkout: //li[@class='item']//button[span='Check Out']
 
                 -
                      header:
-                        xpath: //div[@class='cart-continue-shopping']
+                        xpath: //main[@id='maincontent']
                         links:
                              continue_shopping: //a[@title='Continue Shopping']
 
@@ -119,7 +121,7 @@ shopping_cart:
         buttons:
             expand_tax: //tr[@class='summary-total']
         links:
-            checkout_with_multiple_addresses: //a[text()='Checkout with Multiple Addresses']
+            checkout_with_multiple_addresses: //a[text()='Shopping list with Multiple Addresses']
         messages:
             product_added_to_cart:  //li[normalize-space(@class)='success-msg' and contains(.,'%productName% was added to your shopping cart.')]
             shopping_cart_is_empty: //h1[contains(.,'Shopping Cart is Empty')]

@@ -106,7 +106,7 @@ checkout:
                             back: //li[@id='opc-shipping']//p[@class='back-link']/a[@href]
                         required: [shipping_first_name, shipping_last_name, shipping_street_address_1, shipping_city, shipping_state, shipping_country, shipping_zip_code, shipping_telephone]
                 -
-                    shipping_method:
+                    shipping_methods:
                         xpath: //ol[@id='checkoutSteps']//li[@id='opc-shipping_method']
                         buttons:
                             shipping_next_button: //button
@@ -127,13 +127,17 @@ checkout:
                             gift_option_for_individual_items_from: //div[h5[contains(.,'%productName%')]]//input[@title='From']
                             gift_option_for_individual_items_to: //div[h5[contains(.,'%productName%')]]//input[@title='To']
                             gift_option_for_individual_items_message: //div[h5[contains(.,'%productName%')]]//textarea[@title='From']
+                            shipping_method: //div[@id='checkout-shipping-method-load']//select
                         links:
                             back: //li[@id='opc-shipping_method']//p[@class='back-link']/a[@href]
+                        dropdowns:
+                            shipping_method: //div[@id='checkout-shipping-method-load']//select
+
                 -
                     payment_method:
                         xpath: //div[@class='opc-wrapper']
                         buttons:
-                            place_order: //button[span='Place Order']
+                            place_order: //div[@class='payment-method _active']//button[span='Place Order']
                             payment_login: //button[@data-action='checkout-method-login']
                             continue_to_paypal: //button[span='Continue to PayPal']
 
@@ -146,6 +150,7 @@ checkout:
                             name_on_card: //input[@id='%paymentId%_cc_owner']
                             card_number: //input[@id='%paymentId%_cc_number']
                             card_verification_number : //input[@id='%paymentId%_cc_cid']
+                            purchase_order_number: //input[@id='po_number']
                         dropdowns:
                             card_type: //select[@id='%paymentId%_cc_type']
                             expiration_month: //select[@id='%paymentId%_expiration']
@@ -233,7 +238,7 @@ checkout_payment:
                         xpath: //div[@class='opc-wrapper']
                         buttons:
                             place_order: //button[span='Place Order']
-                            apply_discount: //button[@value='Apply Discount']
+                            apply_discount: //button[@value='Apply']
                             apply_giftcard: //button[@value='Apply']
                             continue_to_paypal: //button[span='Continue to PayPal']
                         radiobuttons:
@@ -245,13 +250,30 @@ checkout_payment:
                             payment_email: //input[@id='customer-email']
                             payment_password: //input[@id='customer-password']
                             credit_card_number: //input[@id='md_cybersource_cc_number']
+                            paypal_email: //input[@id="email"]
+                            paypal_password: //input[@id="password"]
+                            purchase_order_number: //input[@id='po_number']
+                            cancellation_date: //input[@id='cancel_date']
                         dropdowns:
                             card_type: //select[@id='md_cybersource_cc_type']
                             expiration_month: //select[@id='md_cybersource_expiration']
                             expiration_year: //select[@id='md_cybersource_expiration_yr']
                         links:
                             back: //li[@id='opc-payment']//p[@class='back-link']/a[@href]
-                        required: [card_type, card_number, expiration_month, expiration_year, card_verification_number, name_on_card]   
+                        required: [card_type, card_number, expiration_month, expiration_year, card_verification_number, name_on_card]
+order_confirmation:
+    mca: checkout/onepage/success/
+    title: Confirmation
+    uimap:
+        form: &successForm
+            fieldsets:
+                -
+                    create_account:
+                        xpath: //div[@id='registration']
+                        fields:
+                            password: //div[@class='control _with-tooltip']//input[@name='password']
+                            confirm_password: //input[@name='confirmation']
+
                         
 
 paypal_express_review:
@@ -265,3 +287,9 @@ paypal_express_review:
                         xpath: //main[@id='maincontent']
                         buttons:
                             place_order: //button[@id='review-button']
+                            checkout_paypal: //input[@title='Checkout with PayPal']
+                        dropdowns:
+                            shipping_method: //select[@id='shipping-method']
+                        select:
+                            shipping_method: //select[@id='shipping-method']
+

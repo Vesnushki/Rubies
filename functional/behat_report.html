@@ -331,7 +331,7 @@
 <div class="scenario background">
 <h3>
 <span class="keyword">Background: </span>
-<span class="path">features\Checkout_RB\Visa.feature:4</span>
+<span class="path">features\Checkout_RB\paypal.feature:4</span>
 </h3>
 <ol>
 <li class="passed">
@@ -344,7 +344,7 @@
 <thead>
 <tr class="row">
 <td>productUrl</td>
-<td>colton-hat</td>
+<td>catalog/product/view/id/191/s/hooligan-snap-cap/</td>
 </tr>
 </thead>
 <tbody>
@@ -360,15 +360,15 @@
 </li>
 <li class="passed">
 <div class="step">
-<span class="keyword">Then </span>
-<span class="text">I click on "<strong class="passed_param">//div[@option-id='1043']</strong>"</span>
-<span class="path">FeatureContext::iClickOn()</span>
+<span class="keyword">And </span>
+<span class="text">I wait for <strong class="passed_param">5</strong> seconds</span>
+<span class="path">FeatureContext::waitForSeconds()</span>
 </div>
 </li>
 <li class="passed">
 <div class="step">
-<span class="keyword">Then </span>
-<span class="text">I click on "<strong class="passed_param">//div[@option-id='1251']</strong>"</span>
+<span class="keyword">And </span>
+<span class="text">I click on "<strong class="passed_param">//div[@option-id='2604']</strong>"</span>
 <span class="path">FeatureContext::iClickOn()</span>
 </div>
 </li>
@@ -388,93 +388,34 @@
 </li>
 <li class="passed">
 <div class="step">
-<span class="keyword">Then </span>
-<span class="text">I should see "<strong class="passed_param">You added Colton Hat to your shopping cart.</strong>"</span>
-<span class="path">FeatureContext::assertPageContainsText()</span>
-</div>
-</li>
-<li class="passed">
-<div class="step">
-<span class="keyword">Given </span>
-<span class="text">I go to "<strong class="passed_param">product_page</strong>" with next parameters:</span>
-<span class="path">FeatureContext::visit()</span>
-</div>
-<table class="argument">
-<thead>
-<tr class="row">
-<td>productUrl</td>
-<td>mens/headwear/caps/hoover-ii-cap</td>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
-</li>
-<li class="passed">
-<div class="step">
 <span class="keyword">And </span>
-<span class="text">I believe I am on "<strong class="passed_param">product_page</strong>"</span>
-<span class="path">FeatureContext::loadPage()</span>
-</div>
-</li>
-<li class="passed">
-<div class="step">
-<span class="keyword">And </span>
-<span class="text">I select any color and size</span>
-<span class="path">FeatureContext::iSelectAnyColorAndSize()</span>
-</div>
-</li>
-<li class="passed">
-<div class="step">
-<span class="keyword">And </span>
-<span class="text">I wait for AJAX</span>
-<span class="path">FeatureContext::waitForAjax()</span>
-</div>
-</li>
-<li class="passed">
-<div class="step">
-<span class="keyword">When </span>
-<span class="text">I press "<strong class="passed_param">add_to_cart</strong>" in fieldset "<strong class="passed_param">product_info</strong>"</span>
-<span class="path">FeatureContext::pressButtonInFieldset()</span>
-</div>
-</li>
-<li class="passed">
-<div class="step">
-<span class="keyword">And </span>
-<span class="text">I wait for AJAX</span>
-<span class="path">FeatureContext::waitForAjax()</span>
-</div>
-</li>
-<li class="passed">
-<div class="step">
-<span class="keyword">Then </span>
-<span class="text">I should see "<strong class="passed_param">You added Hoover II Cap to your shopping cart.</strong>"</span>
-<span class="path">FeatureContext::assertPageContainsText()</span>
+<span class="text">I wait for <strong class="passed_param">5</strong> seconds</span>
+<span class="path">FeatureContext::waitForSeconds()</span>
 </div>
 </li>
 </ol>
 </div>
 <div class="scenario">
 <ul class="tags">
-<li>@1</li>
+<li>@3</li>
 </ul>
 <h3>
 <span class="keyword">Scenario: </span>
-<span class="title">Sign in on checkout and Visa payment method</span>
-<span class="path">features\Checkout_RB\Visa.feature:31</span>
+<span class="title">Sign in on checkout and PayPal payment method</span>
+<span class="path">features\Checkout_RB\paypal.feature:15</span>
 </h3>
 <ol>
 <li class="passed">
 <div class="step">
 <span class="keyword">When </span>
-<span class="text">I go to "<strong class="passed_param">checkout</strong>"</span>
+<span class="text">I go to "<strong class="passed_param">shopping_cart</strong>"</span>
 <span class="path">FeatureContext::goToPage()</span>
 </div>
 </li>
 <li class="passed">
 <div class="step">
 <span class="keyword">And </span>
-<span class="text">I believe I am on "<strong class="passed_param">checkout</strong>"</span>
+<span class="text">I believe I am on "<strong class="passed_param">shopping_cart</strong>"</span>
 <span class="path">FeatureContext::loadPage()</span>
 </div>
 </li>
@@ -487,143 +428,8 @@
 </li>
 <li class="passed">
 <div class="step">
-<span class="keyword">Then </span>
-<span class="text">I wait until I see "<strong class="passed_param">Next</strong>"</span>
-<span class="path">FeatureContext::iWaitForElement()</span>
-</div>
-</li>
-<li class="passed">
-<div class="step">
 <span class="keyword">And </span>
-<span class="text">I fill in the following into fieldset "<strong class="passed_param">shipping_information</strong>":</span>
-<span class="path">FeatureContext::fillFieldsIntoFieldset()</span>
-</div>
-<table class="argument">
-<thead>
-<tr class="row">
-<td>shipping_email</td>
-<td>kkatekoss@gmail.com</td>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
-</li>
-<li class="passed">
-<div class="step">
-<span class="keyword">And </span>
-<span class="text">I wait for AJAX</span>
-<span class="path">FeatureContext::waitForAjax()</span>
-</div>
-</li>
-<li class="passed">
-<div class="step">
-<span class="keyword">Then </span>
-<span class="text">I wait until I see "<strong class="passed_param">Password</strong>"</span>
-<span class="path">FeatureContext::iWaitForElement()</span>
-</div>
-</li>
-<li class="passed">
-<div class="step">
-<span class="keyword">And </span>
-<span class="text">I fill in the following into fieldset "<strong class="passed_param">shipping_information</strong>":</span>
-<span class="path">FeatureContext::fillFieldsIntoFieldset()</span>
-</div>
-<table class="argument">
-<thead>
-<tr class="row">
-<td>shipping_password</td>
-<td>Kkate123</td>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
-</li>
-<li class="passed">
-<div class="step">
-<span class="keyword">And </span>
-<span class="text">I press "<strong class="passed_param">shipping_login</strong>" in fieldset "<strong class="passed_param">shipping_information</strong>"</span>
-<span class="path">FeatureContext::pressButtonInFieldset()</span>
-</div>
-</li>
-<li class="passed">
-<div class="step">
-<span class="keyword">And </span>
-<span class="text">I wait for AJAX</span>
-<span class="path">FeatureContext::waitForAjax()</span>
-</div>
-</li>
-<li class="passed">
-<div class="step">
-<span class="keyword">And </span>
-<span class="text">I wait for <strong class="passed_param">15</strong> seconds</span>
-<span class="path">FeatureContext::waitForSeconds()</span>
-</div>
-</li>
-<li class="passed">
-<div class="step">
-<span class="keyword">And </span>
-<span class="text">I set "<strong class="passed_param">radio_button_for_login_user</strong>" in fieldset "<strong class="passed_param">shipping_method</strong>"</span>
-<span class="path">FeatureContext::setOption()</span>
-</div>
-</li>
-<li class="passed">
-<div class="step">
-<span class="keyword">And </span>
-<span class="text">I press "<strong class="passed_param">shipping_next_button</strong>" in fieldset "<strong class="passed_param">shipping_method</strong>"</span>
-<span class="path">FeatureContext::pressButtonInFieldset()</span>
-</div>
-</li>
-<li class="passed">
-<div class="step">
-<span class="keyword">And </span>
-<span class="text">I wait for AJAX</span>
-<span class="path">FeatureContext::waitForAjax()</span>
-</div>
-</li>
-<li class="passed">
-<div class="step">
-<span class="keyword">And </span>
-<span class="text">I wait for <strong class="passed_param">10</strong> seconds</span>
-<span class="path">FeatureContext::waitForSeconds()</span>
-</div>
-</li>
-<li class="passed">
-<div class="step">
-<span class="keyword">And </span>
-<span class="text">I believe I am on "<strong class="passed_param">checkout_payment</strong>"</span>
-<span class="path">FeatureContext::loadPage()</span>
-</div>
-</li>
-<li class="passed">
-<div class="step">
-<span class="keyword">Then </span>
-<span class="text">I wait until I see "<strong class="passed_param">Apply Gift Card</strong>"</span>
-<span class="path">FeatureContext::iWaitForElement()</span>
-</div>
-</li>
-<li class="passed">
-<div class="step">
-<span class="keyword">And </span>
-<span class="text">I set "<strong class="passed_param">check_payment</strong>" in fieldset "<strong class="passed_param">payment_method</strong>" with following parameters:</span>
-<span class="path">FeatureContext::setOptionInFiedsetWithParams()</span>
-</div>
-<table class="argument">
-<thead>
-<tr class="row">
-<td>paymentID</td>
-<td>md_cybersource</td>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
-</li>
-<li class="passed">
-<div class="step">
-<span class="keyword">Then </span>
-<span class="text">I click on "<strong class="passed_param">//*[@id='checkout-payment-method-load']/div/div[1]/div[2]/div[4]/div/button</strong>"</span>
+<span class="text">I click on "<strong class="passed_param">//input[@title='Checkout with PayPal']</strong>"</span>
 <span class="path">FeatureContext::iClickOn()</span>
 </div>
 </li>
@@ -637,279 +443,63 @@
 <li class="passed">
 <div class="step">
 <span class="keyword">Then </span>
-<span class="text">I should see "<strong class="passed_param">Thank you for your order!</strong>"</span>
-<span class="path">FeatureContext::assertPageContainsText()</span>
-</div>
-</li>
-</ol>
-</div>
-<div class="scenario">
-<ul class="tags">
-<li>@2</li>
-</ul>
-<h3>
-<span class="keyword">Scenario: </span>
-<span class="title">Register on checkout and Visa payment method</span>
-<span class="path">features\Checkout_RB\Visa.feature:58</span>
-</h3>
-<ol>
-<li class="passed">
-<div class="step">
-<span class="keyword">When </span>
-<span class="text">I go to "<strong class="passed_param">checkout</strong>"</span>
-<span class="path">FeatureContext::goToPage()</span>
-</div>
-</li>
-<li class="passed">
-<div class="step">
-<span class="keyword">And </span>
-<span class="text">I believe I am on "<strong class="passed_param">checkout</strong>"</span>
-<span class="path">FeatureContext::loadPage()</span>
-</div>
-</li>
-<li class="passed">
-<div class="step">
-<span class="keyword">And </span>
-<span class="text">I wait for AJAX</span>
-<span class="path">FeatureContext::waitForAjax()</span>
-</div>
-</li>
-<li class="passed">
-<div class="step">
-<span class="keyword">Then </span>
-<span class="text">I wait until I see "<strong class="passed_param">Next</strong>"</span>
+<span class="text">I wait until I see "<strong class="passed_param">Pay with PayPal</strong>"</span>
 <span class="path">FeatureContext::iWaitForElement()</span>
 </div>
-</li>
-<li class="passed">
-<div class="step">
-<span class="keyword">And </span>
-<span class="text">I fill in the following into fieldset "<strong class="passed_param">shipping_information</strong>":</span>
-<span class="path">FeatureContext::fillFieldsIntoFieldset()</span>
-</div>
-<table class="argument">
-<thead>
-<tr class="row">
-<td>shipping_email</td>
-<td>%rand%_guest@guidance.com</td>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
-</li>
-<li class="passed">
-<div class="step">
-<span class="keyword">And </span>
-<span class="text">I wait for AJAX</span>
-<span class="path">FeatureContext::waitForAjax()</span>
-</div>
-</li>
-<li class="passed">
-<div class="step">
-<span class="keyword">And </span>
-<span class="text">I fill in the following into fieldset "<strong class="passed_param">shipping_information</strong>":</span>
-<span class="path">FeatureContext::fillFieldsIntoFieldset()</span>
-</div>
-<table class="argument">
-<thead>
-<tr class="row">
-<td>shipping_first_name</td>
-<td>True</td>
-</tr>
-</thead>
-<tbody>
-<tr class="row">
-<td>shipping_last_name</td>
-<td>Marvin</td>
-</tr>
-<tr class="row">
-<td>shipping_company</td>
-<td>Google</td>
-</tr>
-<tr class="row">
-<td>shipping_street_address_1</td>
-<td>4134 Del Rey Avenue</td>
-</tr>
-<tr class="row">
-<td>shipping_city</td>
-<td>Marina Del Rey</td>
-</tr>
-<tr class="row">
-<td>shipping_zip_code</td>
-<td>90292</td>
-</tr>
-<tr class="row">
-<td>shipping_telephone</td>
-<td>310 754 4000</td>
-</tr>
-</tbody>
-</table>
 </li>
 <li class="passed">
 <div class="step">
 <span class="keyword">When </span>
-<span class="text">I select "<strong class="passed_param">United States</strong>" from "<strong class="passed_param">shipping_country</strong>" in fieldset "<strong class="passed_param">shipping_information</strong>"</span>
-<span class="path">FeatureContext::selectOption()</span>
-</div>
-</li>
-<li class="passed">
-<div class="step">
-<span class="keyword">And </span>
-<span class="text">I wait for AJAX</span>
-<span class="path">FeatureContext::waitForAjax()</span>
-</div>
-</li>
-<li class="passed">
-<div class="step">
-<span class="keyword">And </span>
-<span class="text">I select "<strong class="passed_param">California</strong>" from "<strong class="passed_param">shipping_state</strong>" in fieldset "<strong class="passed_param">shipping_information</strong>"</span>
-<span class="path">FeatureContext::selectOption()</span>
-</div>
-</li>
-<li class="passed">
-<div class="step">
-<span class="keyword">And </span>
-<span class="text">I set "<strong class="passed_param">radio_button</strong>" in fieldset "<strong class="passed_param">shipping_method</strong>"</span>
-<span class="path">FeatureContext::setOption()</span>
-</div>
-</li>
-<li class="passed">
-<div class="step">
-<span class="keyword">And </span>
-<span class="text">I wait for AJAX</span>
-<span class="path">FeatureContext::waitForAjax()</span>
-</div>
-</li>
-<li class="passed">
-<div class="step">
-<span class="keyword">And </span>
-<span class="text">I wait for <strong class="passed_param">10</strong> seconds</span>
-<span class="path">FeatureContext::waitForSeconds()</span>
-</div>
-</li>
-<li class="passed">
-<div class="step">
-<span class="keyword">And </span>
-<span class="text">I press "<strong class="passed_param">shipping_next_button</strong>" in fieldset "<strong class="passed_param">shipping_method</strong>"</span>
-<span class="path">FeatureContext::pressButtonInFieldset()</span>
-</div>
-</li>
-<li class="passed">
-<div class="step">
-<span class="keyword">And </span>
-<span class="text">I wait for AJAX</span>
-<span class="path">FeatureContext::waitForAjax()</span>
-</div>
-</li>
-<li class="passed">
-<div class="step">
-<span class="keyword">And </span>
-<span class="text">I wait for <strong class="passed_param">10</strong> seconds</span>
-<span class="path">FeatureContext::waitForSeconds()</span>
-</div>
-</li>
-<li class="passed">
-<div class="step">
-<span class="keyword">And </span>
-<span class="text">I believe I am on "<strong class="passed_param">checkout_payment</strong>"</span>
-<span class="path">FeatureContext::loadPage()</span>
+<span class="text">I choose to pay with PayPal</span>
+<span class="path">FeatureContext::iChooseToPayWithPayPal()</span>
 </div>
 </li>
 <li class="passed">
 <div class="step">
 <span class="keyword">Then </span>
-<span class="text">I wait until I see "<strong class="passed_param">Apply Gift Card</strong>"</span>
+<span class="text">I wait until I see "<strong class="passed_param">PayPal is the safer, easier way to pay</strong>"</span>
 <span class="path">FeatureContext::iWaitForElement()</span>
 </div>
 </li>
 <li class="passed">
 <div class="step">
 <span class="keyword">And </span>
-<span class="text">I set "<strong class="passed_param">check_payment</strong>" in fieldset "<strong class="passed_param">payment_method</strong>" with following parameters:</span>
-<span class="path">FeatureContext::setOptionInFiedsetWithParams()</span>
+<span class="text">I click on "<strong class="passed_param">//input[@id='confirmButtonTop']</strong>"</span>
+<span class="path">FeatureContext::iClickOn()</span>
 </div>
-<table class="argument">
-<thead>
-<tr class="row">
-<td>paymentID</td>
-<td>md_cybersource</td>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
 </li>
 <li class="passed">
 <div class="step">
 <span class="keyword">Then </span>
-<span class="text">I wait until I see "<strong class="passed_param">Place Order</strong>"</span>
+<span class="text">I wait until I see "<strong class="passed_param">Review Order</strong>"</span>
 <span class="path">FeatureContext::iWaitForElement()</span>
 </div>
 </li>
 <li class="passed">
 <div class="step">
 <span class="keyword">And </span>
-<span class="text">I select "<strong class="passed_param">Visa</strong>" from "<strong class="passed_param">card_type</strong>" in fieldset "<strong class="passed_param">payment_method</strong>"</span>
-<span class="path">FeatureContext::selectOption()</span>
-</div>
-</li>
-<li class="passed">
-<div class="step">
-<span class="keyword">And </span>
-<span class="text">I wait for <strong class="passed_param">5</strong> seconds</span>
-<span class="path">FeatureContext::waitForSeconds()</span>
-</div>
-</li>
-<li class="passed">
-<div class="step">
-<span class="keyword">And </span>
-<span class="text">I fill in the following into fieldset "<strong class="passed_param">payment_method</strong>":</span>
-<span class="path">FeatureContext::fillFieldsIntoFieldset()</span>
-</div>
-<table class="argument">
-<thead>
-<tr class="row">
-<td>credit_card_number</td>
-<td>4111111111111111</td>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
-</li>
-<li class="passed">
-<div class="step">
-<span class="keyword">And </span>
-<span class="text">I select "<strong class="passed_param">01 - January</strong>" from "<strong class="passed_param">expiration_month</strong>" in fieldset "<strong class="passed_param">payment_method</strong>"</span>
-<span class="path">FeatureContext::selectOption()</span>
-</div>
-</li>
-<li class="passed">
-<div class="step">
-<span class="keyword">And </span>
-<span class="text">I wait for <strong class="passed_param">5</strong> seconds</span>
-<span class="path">FeatureContext::waitForSeconds()</span>
-</div>
-</li>
-<li class="passed">
-<div class="step">
-<span class="keyword">And </span>
-<span class="text">I select "<strong class="passed_param">2020</strong>" from "<strong class="passed_param">expiration_year</strong>" in fieldset "<strong class="passed_param">payment_method</strong>"</span>
-<span class="path">FeatureContext::selectOption()</span>
-</div>
-</li>
-<li class="passed">
-<div class="step">
-<span class="keyword">And </span>
-<span class="text">I wait for <strong class="passed_param">5</strong> seconds</span>
-<span class="path">FeatureContext::waitForSeconds()</span>
+<span class="text">I wait for AJAX</span>
+<span class="path">FeatureContext::waitForAjax()</span>
 </div>
 </li>
 <li class="passed">
 <div class="step">
 <span class="keyword">Then </span>
-<span class="text">I click on "<strong class="passed_param">//*[@id='checkout-payment-method-load']/div/div[1]/div[2]/div[4]/div/button</strong>"</span>
+<span class="text">I click on "<strong class="passed_param">//div[contains(@class, 'box-order-shipping-method')]</strong>"</span>
+<span class="path">FeatureContext::iClickOn()</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">And </span>
+<span class="text">I click on "<strong class="passed_param">//select[@id='shipping-method']</strong>"</span>
+<span class="path">FeatureContext::iClickOn()</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">And </span>
+<span class="text">I click on "<strong class="passed_param">//option[@value='flatrate_flatrate']</strong>"</span>
 <span class="path">FeatureContext::iClickOn()</span>
 </div>
 </li>
@@ -918,6 +508,27 @@
 <span class="keyword">And </span>
 <span class="text">I wait for AJAX</span>
 <span class="path">FeatureContext::waitForAjax()</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">And </span>
+<span class="text">I wait for <strong class="passed_param">5</strong> seconds</span>
+<span class="path">FeatureContext::waitForSeconds()</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">Then </span>
+<span class="text">I click on "<strong class="passed_param">//button[@id='review-button']</strong>"</span>
+<span class="path">FeatureContext::iClickOn()</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">Then </span>
+<span class="text">I wait until I see "<strong class="passed_param">Thank you for your order!</strong>"</span>
+<span class="path">FeatureContext::iWaitForElement()</span>
 </div>
 </li>
 <li class="passed">
@@ -933,13 +544,13 @@
 <div class="summary passed">
 <div class="counters">
 <p class="scenarios">
-2 scenarios (<strong class="passed">2 passed</strong>)
+1 scenario (<strong class="passed">1 passed</strong>)
 </p>
 <p class="steps">
-79 steps (<strong class="passed">79 passed</strong>)
+26 steps (<strong class="passed">26 passed</strong>)
 </p>
 <p class="time">
-3m19.489s
+2m13.471s
 </p>
 </div>
 <div class="switchers">

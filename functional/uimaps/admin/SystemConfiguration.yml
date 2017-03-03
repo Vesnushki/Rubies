@@ -1134,9 +1134,9 @@ system_configuration:
                         fieldsets:
                             -
                                 checkout_totals_sort_order:
-                                    xpath: //div/fieldset[legend='Checkout Totals Sort Order']
+                                    xpath: //div/fieldset[legend='ShoppingList Totals Sort Order']
                                     links:
-                                        checkout_totals_sort_order_link: //a[text()='Checkout Totals Sort Order']
+                                        checkout_totals_sort_order_link: //a[text()='ShoppingList Totals Sort Order']
                                     fields:
                                         subtotal: //input[@name='groups[totals_sort][fields][subtotal][value]']
                                         discount: //input[@name='groups[totals_sort][fields][discount][value]']
@@ -1552,9 +1552,9 @@ system_configuration:
                         fieldsets:
                             -
                                 checkout_options:
-                                    xpath: //div/fieldset[legend='Checkout Options']
+                                    xpath: //div/fieldset[legend='ShoppingList Options']
                                     links:
-                                        checkout_options_link: //a[text()='Checkout Options']
+                                        checkout_options_link: //a[text()='ShoppingList Options']
                                     dropdowns:
                                         enable_onepage_checkout: //select[@name='groups[options][fields][onepage_checkout_enabled][value]']
                                         allow_guest_checkout: //select[@name='groups[options][fields][guest_checkout][value]']
@@ -2031,10 +2031,10 @@ system_configuration:
                                         enable_use_default: //input[@name='groups[optimizer][fields][active][inherit]']
                             -
                                 google_checkout:
-                                    xpath: //div/fieldset[legend='Google Checkout']
+                                    xpath: //div/fieldset[legend='Google ShoppingList']
                                     links:
-                                        google_checkout_link: //a[text()='Google Checkout']
-                                        signup_for_google_checkout: //a[text()='Signup for Google Checkout']
+                                        google_checkout_link: //a[text()='Google ShoppingList']
+                                        signup_for_google_checkout: //a[text()='Signup for Google ShoppingList']
                                     fields:
                                         title: //input[@name='groups[checkout][fields][title][value]']
                                         merchant_id: //input[@name='groups[checkout][fields][merchant_id][value]']
@@ -2066,9 +2066,9 @@ system_configuration:
                                         disable_default_tax_tables_use_default: //input[@name='groups[checkout][fields][disable_default_tax_tables][inherit]']
                             -
                                 google_checkout_shipping_merchant_calculated:
-                                    xpath: //div/fieldset[legend='Google Checkout Shipping - Merchant Calculated']
+                                    xpath: //div/fieldset[legend='Google ShoppingList Shipping - Merchant Calculated']
                                     links:
-                                        google_checkout_shipping_merchant_calculated_link: //a[text()='Google Checkout Shipping - Merchant Calculated']
+                                        google_checkout_shipping_merchant_calculated_link: //a[text()='Google ShoppingList Shipping - Merchant Calculated']
                                     fields:
                                         default_price: //ul[@id='merchant_allowed_methods_container']/li[%id%]/div/input[@name='groups[checkout_shipping_merchant][fields][allowed_methods][value][price][]']
                                     dropdowns:
@@ -2082,9 +2082,9 @@ system_configuration:
                                         add_shipping_method_use_default: //input[@name='groups[checkout_shipping_merchant][fields][allowed_methods][inherit]']
                             -
                                 google_checkout_shipping_carrier_calculated:
-                                    xpath: //div/fieldset[legend='Google Checkout Shipping - Carrier Calculated']
+                                    xpath: //div/fieldset[legend='Google ShoppingList Shipping - Carrier Calculated']
                                     links:
-                                        google_checkout_shipping_carrier_calculated_link: //a[text()='Google Checkout Shipping - Carrier Calculated']
+                                        google_checkout_shipping_carrier_calculated_link: //a[text()='Google ShoppingList Shipping - Carrier Calculated']
                                     fields:
                                         default_price_for_methods: //input[@name='groups[checkout_shipping_carrier][fields][default_price][value]']
                                         default_package_width: //input[@name='groups[checkout_shipping_carrier][fields][default_width][value]']
@@ -2105,9 +2105,9 @@ system_configuration:
                                         carrier_calculated_methods_use_default: //input[@name='groups[checkout_shipping_carrier][fields][methods][inherit]']
                             -
                                 google_checkout_shipping_flat_rate:
-                                    xpath: //div/fieldset[legend='Google Checkout Shipping - Flat Rate']
+                                    xpath: //div/fieldset[legend='Google ShoppingList Shipping - Flat Rate']
                                     links:
-                                        google_checkout_shipping_flat_rate_link: //a[text()='Google Checkout Shipping - Flat Rate']
+                                        google_checkout_shipping_flat_rate_link: //a[text()='Google ShoppingList Shipping - Flat Rate']
                                     fields:
                                         rate_1_title: //input[@name='groups[checkout_shipping_flatrate][fields][title_1][value]']
                                         rate_1_amount: //input[@name='groups[checkout_shipping_flatrate][fields][price_1][value]']
@@ -2140,9 +2140,9 @@ system_configuration:
                                         rate_3_ship_to_specific_countries_use_default: //input[@name='groups[checkout_shipping_flatrate][fields][specificcountry_3][inherit]']
                             -
                                 google_checkout_shipping_digital_delivery:
-                                    xpath: //div/fieldset[legend='Google Checkout Shipping - Digital Delivery']
+                                    xpath: //div/fieldset[legend='Google ShoppingList Shipping - Digital Delivery']
                                     links:
-                                        google_checkout_shipping_digital_delivery_link: //a[text()='Google Checkout Shipping - Digital Delivery']
+                                        google_checkout_shipping_digital_delivery_link: //a[text()='Google ShoppingList Shipping - Digital Delivery']
                                     dropdowns:
                                         enable_digital_delivery: //select[@name='groups[checkout_shipping_virtual][fields][active][value]']
                                         delivery_schedule: //select[@name='groups[checkout_shipping_virtual][fields][schedule][value]']
@@ -2227,9 +2227,9 @@ system_configuration:
                                         proxy_port: //input[@name='groups[api][fields][proxy_port][inherit]']
                             -
                                 express_checkout_settings:
-                                    xpath: //div/fieldset[legend='Express Checkout Settings']
+                                    xpath: //div/fieldset[legend='Express ShoppingList Settings']
                                     links:
-                                        express_checkout_settings_link: //a[text()='Express Checkout Settings']
+                                        express_checkout_settings_link: //a[text()='Express ShoppingList Settings']
                                     fields:
                                         excheck_title: //input[@name='groups[express][fields][title][value]']
                                         excheck_sort_order: //input[@name='groups[express][fields][sort_order][value]']
@@ -2449,9 +2449,9 @@ system_configuration:
                                         pp_allowed_credit_card_types_use_default: //input[@name='groups[verisign][fields][cctypes][inherit]']
                             -
                                 express_checkout_payflow_edition_settings:
-                                    xpath: //div/fieldset[legend='Express Checkout (Payflow Edition) Settings']
+                                    xpath: //div/fieldset[legend='Express ShoppingList (Payflow Edition) Settings']
                                     links:
-                                        express_checkout_payflow_edition_settings_link: //a[text()='Express Checkout (Payflow Edition) Settings']
+                                        express_checkout_payflow_edition_settings_link: //a[text()='Express ShoppingList (Payflow Edition) Settings']
                                     fields:
                                         ecpe_title: //input[@name='groups[express_pe][fields][title][value]']
                                         ecpe_sort_order: //input[@name='groups[express_pe][fields][sort_order][value]']
@@ -2625,9 +2625,9 @@ system_configuration:
                                         cmo_payment_from_specific_countries_use_default: //input[@name='groups[checkmo][fields][specificcountry][inherit]']
                             -
                                 zero_subtotal_checkout:
-                                    xpath: //div/fieldset[legend='Zero Subtotal Checkout']
+                                    xpath: //div/fieldset[legend='Zero Subtotal ShoppingList']
                                     links:
-                                        zero_subtotal_checkout_link: //a[text()='Zero Subtotal Checkout']
+                                        zero_subtotal_checkout_link: //a[text()='Zero Subtotal ShoppingList']
                                     fields:
                                         zsc_title: //input[@name='groups[free][fields][title][value]']
                                         zsc_sort_order: //input[@name='groups[free][fields][sort_order][value]']
@@ -3320,9 +3320,9 @@ system_configuration:
                                         asp_debug_log_use_default: //input[@name='groups[amazonpayments_asp][fields][debug_log][inherit]']
                             -
                                 checkout_by_amazon:
-                                    xpath: //div/fieldset[legend='Checkout by Amazon']
+                                    xpath: //div/fieldset[legend='ShoppingList by Amazon']
                                     links:
-                                        checkout_by_amazon_link: //a[text()='Checkout by Amazon']
+                                        checkout_by_amazon_link: //a[text()='ShoppingList by Amazon']
                                     fields:
                                         cba_title: //input[@name='groups[amazonpayments_cba][fields][title][value]']
                                         cba_merchant_id: //input[@name='groups[amazonpayments_cba][fields][merchant_id][value]']

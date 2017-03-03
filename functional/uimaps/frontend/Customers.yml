@@ -38,7 +38,7 @@ register_account:
                     account_info:
                         xpath: //form[@id='form-validate']
                         buttons:
-                            submit:
+                            submit: //button[@title='Create an Account']
                         checkboxes:
                             sign_up_newsletter: //input[@id='is_subscribed']
                             remember_me: //input[@name='persistent_remember_me']
@@ -50,6 +50,7 @@ register_account:
                             email: //input[@id='email_address']
                             password: //input[@id='password']
                             password_confirmation: //input[@id='password-confirmation']
+                            company_name: //input[@id='company']
                         pageelements:
                             captcha: //img[@alt='CAPTCHA']
                         required: [first_name, last_name, email, password, password_confirmation]
@@ -87,7 +88,7 @@ customer_login:
                             login: //button[@id='send2']
                         links:
                             forgot_password: //a[text()='Forgot Your Password?']
-                            create_account: //a[span='Create an Account']
+                            create_account: //a[contains(.,'Request an account')]
                         fields:
                             email: //input[@id='email']
                             password: //input[@id='pass']
