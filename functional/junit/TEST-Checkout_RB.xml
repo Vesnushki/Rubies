@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite classname="behat.features" errors="0" failures="0" name="As a user I want to be able to checkout products" file="D:\Rubies(autoscripts)\functional\features\Checkout_RB\Checkout_RB.feature" tests="46" time="148.947519">
-    <testcase classname="As a user I want to be able to checkout products" name="Customer checkout with Check Money/order payment method" time="75.102295">
+<testsuite classname="behat.features" errors="0" failures="0" name="As a user I want to be able to checkout products" file="D:\Rubies(autoscripts)\functional\features\Checkout_RB\Checkout_RB.feature" tests="46" time="150.792705">
+    <testcase classname="As a user I want to be able to checkout products" name="Customer checkout with Check Money/order payment method" time="77.292422">
     </testcase>
-    <testcase classname="As a user I want to be able to checkout products" name="Customer checkout with Check Money/order payment method" time="73.766219">
+    <testcase classname="As a user I want to be able to checkout products" name="Customer checkout with Check Money/order payment method" time="73.359283">
     </testcase>
 </testsuite>

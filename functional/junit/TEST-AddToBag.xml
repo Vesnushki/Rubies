@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite classname="behat.features" errors="0" failures="1" name="As a user I want to be able to add products to cart" file="D:\Rubies(autoscripts)\functional\features\AddToCart\AddToBag.feature" tests="33" time="121.290938">
-    <testcase classname="As a user I want to be able to add products to cart" name="Add product configurable with qty = 1 to cart" time="43.937513">
+<testsuite classname="behat.features" errors="0" failures="1" name="As a user I want to be able to add products to cart" file="D:\Rubies(autoscripts)\functional\features\AddToCart\AddToBag.feature" tests="33" time="114.039625">
+    <testcase classname="As a user I want to be able to add products to cart" name="Add product configurable with qty = 1 to cart" time="41.571284">
     </testcase>
-    <testcase classname="As a user I want to be able to add products to cart" name="Add product configurable with qty = 0 to cart" time="33.303904">
+    <testcase classname="As a user I want to be able to add products to cart" name="Add product configurable with qty = 0 to cart" time="34.190167">
     </testcase>
-    <testcase classname="As a user I want to be able to add products to cart" name="Add  simple product with q-ty = 5" time="40.516317">
+    <testcase classname="As a user I want to be able to add products to cart" name="Add  simple product with q-ty = 5" time="35.745167">
     </testcase>
-    <testcase classname="As a user I want to be able to add products to cart" name="Add product from PLP to cart" time="3.118179">
+    <testcase classname="As a user I want to be able to add products to cart" name="Add product from PLP to cart" time="2.243006">
         <failure message="Could not evaluate CSS selector: &quot;//img[@alt='Test Costume']&quot;" type="failed"><![CDATA[
 exception 'InvalidArgumentException' with message 'Could not evaluate CSS selector: "//img[@alt='Test Costume']"' in D:\Rubies(autoscripts)\functional\features\bootstrap\FeatureContext.php:402
 Stack trace:

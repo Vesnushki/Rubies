@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite classname="behat.features" errors="0" failures="0" name="As a guest user I want to register on the website" file="D:\Rubies(autoscripts)\functional\features\RegistrationAndLogin_RB\UserRegistration_RB.feature" tests="8" time="33.428912">
-    <testcase classname="As a guest user I want to register on the website" name="User registration with correct information" time="20.680183">
+<testsuite classname="behat.features" errors="0" failures="0" name="As a guest user I want to register on the website" file="D:\Rubies(autoscripts)\functional\features\RegistrationAndLogin_RB\UserRegistration_RB.feature" tests="8" time="32.096676">
+    <testcase classname="As a guest user I want to register on the website" name="User registration with correct information" time="19.495956">
     </testcase>
-    <testcase classname="As a guest user I want to register on the website" name="User registration with existing email" time="12.675725">
+    <testcase classname="As a guest user I want to register on the website" name="User registration with existing email" time="12.525716">
     </testcase>
 </testsuite>

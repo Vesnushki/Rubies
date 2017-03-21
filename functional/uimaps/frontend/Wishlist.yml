@@ -82,6 +82,11 @@ my_wishlist:
             required_emails: //div[@class='validation-advice' and @id='advice-required-entry-email_address' and text()='This is a required field.']
         links:
             back: //p[@class='back-link']/a[contains(.,'Back')]
+                -
+                    wishlist_create_list:
+                        xpath: //fieldset[./table[@id='wishlist-table']]
+                        fields:
+                            list_name: //tr[contains(.,'%productName%')]//textarea[@title='Comment']
 
 my_wishlist_index:
     mca: wishlist/index/

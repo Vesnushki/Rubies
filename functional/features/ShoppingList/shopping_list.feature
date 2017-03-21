@@ -15,7 +15,8 @@ Feature: As a user I want to be able to do shopping list activity
       |product_quantity|1|
     Then I follow "add_to_wishlist" in fieldset "product_info"
     And I click on "//button[@id='mwishlist_popup_add']"
-    Then I wait until I see "Product 'White Dress Adult Queen Gorgo Costume' has been added to wishlist 'Main'"
+    And I wait for 5 seconds
+    Then I click on "//div[@class='mwishlist_popup_close']"
 
 
 @2
@@ -35,8 +36,8 @@ Feature: As a user I want to be able to do shopping list activity
       And I wait for 5 seconds
       And I believe I am on "product_page"
    When I set "create_new_wishlist" in fieldset "select_a_wishlist"
-  And I wait for 5 seconds
-  And I fill in "enter_wishlist_name" with "123qa" in fieldset "//div[@class='mwishlist wborder']"
+  And I wait for 15 seconds
+  And I fill in "enter_wishlist_name" with "123qa" in fieldset "select_a_wishlist"
    When I click on "//button[@id='mwishlist_popup_add']"
    Then I should see "Product"
 
@@ -51,7 +52,8 @@ Feature: As a user I want to be able to do shopping list activity
     Then I go to "my_wishlist"
     And I believe I am on "my_wishlist"
     When I click on "//div[@class='wishlist-top']//a[@id='create-new-wishlist-popup-full']"
-
+    And I wait for 5 seconds
+    Then I click on "//input[@id='mwishlist-create']"
   @4
   Scenario: Customer delete Shopping list from shopping list page
     Given I am on "customer_login"

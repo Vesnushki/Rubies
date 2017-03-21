@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite classname="behat.features" errors="0" failures="1" name="As a registered user I want to log in to the website" file="D:\Rubies(autoscripts)\functional\features\RegistrationAndLogin_RB\UserLogin.feature" tests="30" time="132.572583">
-    <testcase classname="As a registered user I want to log in to the website" name="User login  with correct data" time="25.254445">
+<testsuite classname="behat.features" errors="0" failures="1" name="As a registered user I want to log in to the website" file="D:\Rubies(autoscripts)\functional\features\RegistrationAndLogin_RB\UserLogin.feature" tests="30" time="141.358542">
+    <testcase classname="As a registered user I want to log in to the website" name="User login  with correct data" time="29.511026">
     </testcase>
-    <testcase classname="As a registered user I want to log in to the website" name="User login with wrong password" time="11.421654">
+    <testcase classname="As a registered user I want to log in to the website" name="User login with wrong password" time="11.720045">
     </testcase>
-    <testcase classname="As a registered user I want to log in to the website" name="User login with empty fields (form validation)" time="8.058461">
+    <testcase classname="As a registered user I want to log in to the website" name="User login with empty fields (form validation)" time="8.024031">
     </testcase>
-    <testcase classname="As a registered user I want to log in to the website" name="User logout and login as another user (cache validation)" time="78.695501">
+    <testcase classname="As a registered user I want to log in to the website" name="User logout and login as another user (cache validation)" time="82.623410">
         <failure message="The text &quot;kkatekoss1@gmail.com&quot; was not found anywhere in the text of the current page." type="failed"><![CDATA[
 The text "kkatekoss1@gmail.com" was not found anywhere in the text of the current page.
 
@@ -16,6 +16,6 @@ The text "kkatekoss1@gmail.com" was not found anywhere in the text of the curren
 |  
 ]]></failure>
     </testcase>
-    <testcase classname="As a registered user I want to log in to the website" name="User is redirected to the Registration form from Login page" time="5.815333">
+    <testcase classname="As a registered user I want to log in to the website" name="User is redirected to the Registration form from Login page" time="5.846017">
     </testcase>
 </testsuite>
