@@ -54,6 +54,7 @@ Feature: As a user I want to be able to do shopping list activity
     When I click on "//div[@class='wishlist-top']//a[@id='create-new-wishlist-popup-full']"
     And I wait for 5 seconds
     Then I click on "//input[@id='mwishlist-create']"
+    And I fill in "list_name" with "testlist" in fieldset "wishlist_create_list"
   @4
   Scenario: Customer delete Shopping list from shopping list page
     Given I am on "customer_login"
@@ -64,8 +65,9 @@ Feature: As a user I want to be able to do shopping list activity
     Then I should see "My Dashboard"
     Then I go to "my_wishlist"
     And I believe I am on "my_wishlist"
-    When I click on "//button[@class='action remove']"
-
+    When I click on "//form[@id='wishlist-form-12']//button[@class='action remove']//span"
+    When I confirm popup
+    #Given I press ok on alert
   @5
   Scenario: Customer delete Shopping list from shopping list page
     Given I am on "customer_login"

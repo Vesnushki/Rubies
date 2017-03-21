@@ -33,14 +33,15 @@ my_wishlist:
         form:
             fieldsets:
                 -
-                    wishlist:
-                        xpath: //fieldset[./table[@id='wishlist-table']]
+                    wishlist_create_list:
+                        xpath: //aside[contains(@class, '_show')]
                         buttons:
                             add_to_cart: //table[@id='wishlist-table']//tr[contains(.,'%productName%')]//button[span='Add to Cart']
                             share_wishlist: //button[span='Share Wishlist']
                             add_all_to_cart: //button[span='Add All to Cart']
                             update_wishlist: //button[span='Update Wishlist']
                         fields:
+                            list_name: //input[@id='mwishlist-create']
                             comment: //tr[contains(.,'%productName%')]//textarea[@title='Comment']
                             qty: //tr[contains(.,'%productName%')]//input[@class='input-text qty']
                         links:
@@ -82,11 +83,6 @@ my_wishlist:
             required_emails: //div[@class='validation-advice' and @id='advice-required-entry-email_address' and text()='This is a required field.']
         links:
             back: //p[@class='back-link']/a[contains(.,'Back')]
-                -
-                    wishlist_create_list:
-                        xpath: //fieldset[./table[@id='wishlist-table']]
-                        fields:
-                            list_name: //tr[contains(.,'%productName%')]//textarea[@title='Comment']
 
 my_wishlist_index:
     mca: wishlist/index/

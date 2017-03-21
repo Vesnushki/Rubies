@@ -330,12 +330,12 @@
 
 <div class="scenario">
 <ul class="tags">
-<li>@3</li>
+<li>@4</li>
 </ul>
 <h3>
 <span class="keyword">Scenario: </span>
-<span class="title">Customer create Shopping list from shopping list page</span>
-<span class="path">features\ShoppingList\shopping_list.feature:45</span>
+<span class="title">Customer delete Shopping list from shopping list page</span>
+<span class="path">features\ShoppingList\shopping_list.feature:59</span>
 </h3>
 <ol>
 <li class="passed">
@@ -397,37 +397,34 @@
 <li class="passed">
 <div class="step">
 <span class="keyword">When </span>
-<span class="text">I click on "<strong class="passed_param">//div[@class='wishlist-top']//a[@id='create-new-wishlist-popup-full']</strong>"</span>
+<span class="text">I click on "<strong class="passed_param">//form[@id='wishlist-form-12']//button[@class='action remove']//span</strong>"</span>
 <span class="path">FeatureContext::iClickOn()</span>
 </div>
 </li>
-<li class="passed">
+<li class="failed">
 <div class="step">
-<span class="keyword">And </span>
-<span class="text">I wait for <strong class="passed_param">5</strong> seconds</span>
-<span class="path">FeatureContext::waitForSeconds()</span>
+<span class="keyword">When </span>
+<span class="text">I confirm popup</span>
+<span class="path">FeatureContext::iConfirmPopup()</span>
 </div>
-</li>
-<li class="passed">
-<div class="step">
-<span class="keyword">Then </span>
-<span class="text">I click on "<strong class="passed_param">//input[@id='mwishlist-create']</strong>"</span>
-<span class="path">FeatureContext::iClickOn()</span>
-</div>
+<pre class="backtrace">Unable to locate window &quot;&quot;
+Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:37:03'
+System info: host: 'AlexKusakin', ip: '10.9.1.115', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_121'
+Driver info: driver.version: unknown</pre>
 </li>
 </ol>
 </div>
 </div>
-<div class="summary passed">
+<div class="summary failed">
 <div class="counters">
 <p class="scenarios">
-1 scenario (<strong class="passed">1 passed</strong>)
+1 scenario (<strong class="failed">1 failed</strong>)
 </p>
 <p class="steps">
-9 steps (<strong class="passed">9 passed</strong>)
+8 steps (<strong class="passed">7 passed</strong>, <strong class="failed">1 failed</strong>)
 </p>
 <p class="time">
-0m41.311s
+0m41.707s
 </p>
 </div>
 <div class="switchers">

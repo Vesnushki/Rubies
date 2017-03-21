@@ -406,7 +406,44 @@ class FeatureContext extends BehatContext implements MinkAwareInterface
         $element->mouseOver();
     }
 
+    /**
+     * @When /^I confirm popup$/
+     */
+    public function iConfirmPopup()
+    {
+        #$this->getMainContext()->getSession()->getDriver()->getWebDriverSession()->accept_alert();
+        #$this->getSession()->getDriver()->get
+        $this->getSession()->getDriver()->switchToWindow(0);
+        $this->getSession()->getPage()->findButton('Ok')->pressButton();
+    }
+    /**
+     * @Then I switch to popup :name
+     *
+     * @param $name
+     */
+    public function iSwitchToPopup($name)
+    {
+        $this->iSetMainWindowName();
+        $this->getSession()->switchToWindow($name);
+    }
 
+    /**
+     * @Then I set main window name
+     */
+    public function iSetMainWindowName()
+    {
+        $window_name = 'main_window';
+        $script = 'window.name = "' . $window_name . '"';
+        $this->getSession()->executeScript($script);
+    }
+
+    /**
+     * @Then I switch back to main window
+     */
+    public function iSwitchBackToMainWindow()
+    {
+        $this->getSession()->switchToWindow('main_window');
+    }
 
 
 }
