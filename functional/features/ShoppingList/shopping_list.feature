@@ -65,9 +65,9 @@ Feature: As a user I want to be able to do shopping list activity
     Then I should see "My Dashboard"
     Then I go to "my_wishlist"
     And I believe I am on "my_wishlist"
-    When I click on "//form[@id='wishlist-form-12']//button[@class='action remove']//span"
-    When I confirm popup
-    #Given I press ok on alert
+    When I click on "//form[@id='wishlist-form-80']//button[@class='action remove']//span"
+    Then I confirm popup
+
   @5
   Scenario: Customer delete Shopping list from shopping list page
     Given I am on "customer_login"
@@ -81,5 +81,4 @@ Feature: As a user I want to be able to do shopping list activity
     And I wait for 10 seconds
     When I click on "//div[@class='wishlists']//button[@class='action import']"
     Then I wait until I see "Wish List Import"
-
 
